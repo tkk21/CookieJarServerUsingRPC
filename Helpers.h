@@ -3,6 +3,17 @@
 #include <time.h>
 #include "Cookie.h"
 
+
+#define JudyNum 1
+#define TinaNum 2
+
+///
+// because Tina is the younger sister who is the jewel of the Mother's eyes,
+// She gets 2 cookies per Judy's 1
+// Judy feels very insecure about this
+// To signify this, Judy's B value is 1 and Tina's B value is 2
+//
+///
 void print_info(){
 
     char hostname[128];
