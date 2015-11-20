@@ -24,8 +24,6 @@ int *request_cookie_1_svc (struct CookieRequest *request){
     fflush(NULL);
     if (cookieCount <= 0){
         //ran out of cookie
-        //print "no more cookies for you"
-        //and exit
         
         //-2 if cookie is empty
         a = -2;
