@@ -18,7 +18,7 @@ int main (int argc, char**argv){
         exit(2);
     }
 
-    while (true){
+    while (1){
         sleepRand();
         print_info(); printf("Request for a cookie\n");
         struct CookieRequest request = {JudyNum};
