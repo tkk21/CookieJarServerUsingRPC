@@ -28,7 +28,7 @@ void print_info(){
 
     if (gethostname(hostname, sizeof hostname) < 0){
         perror("printinfo_error");
-        exit(errno);
+        exit(1);
     }
     
     char fmt[64], buf[64];
