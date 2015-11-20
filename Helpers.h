@@ -14,6 +14,14 @@
 // To signify this, Judy's B value is 1 and Tina's B value is 2
 //
 ///
+
+//sleep between 1 and 5 seconds
+void sleepRand(){
+    time_t t;
+    srand( (unsigned) time(&t));
+    sleep(rand() %4 + 1);
+}
+
 void print_info(){
 
     char hostname[128];
