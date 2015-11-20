@@ -19,20 +19,21 @@ int main (int argc, char**argv){
     }
 
     while (*a != -2){
-       print_info(); printf("Request for a cookie\n");
-       struct CookieRequest request = {TinaNum};
-       a = request_cookie_1();
-
-       if (*a == 1){
-           print_info(); printf("I got a cookie <:\n");
-       
-       }
-       else if (*a == -1){
-           print_info(); printf("I didn't get a cookie ;-;\n");
-       
-       }
-       else if (*a == -3) {
-            fprintf(stderr, "invalid b value sent to the server\n");
-       }
+        sleepRand();
+        print_info(); printf("Request for a cookie\n");
+        struct CookieRequest request = {TinaNum};
+        a = request_cookie_1();
+    
+        if (*a == 1){
+            print_info(); printf("I got a cookie <:\n");
+        
+         }
+        else if (*a == -1){
+            print_info(); printf("I didn't get a cookie ;-;\n");
+        
+        }
+        else if (*a == -3) {
+             fprintf(stderr, "invalid b value sent to the server\n");
+        }
     }
 }
