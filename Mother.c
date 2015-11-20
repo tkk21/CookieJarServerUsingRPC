@@ -16,7 +16,7 @@ char* getCookieRequestName(int b){
     }
 }
 
-int *request_cookie_1_svc (struct CookieRequest *request){
+int *request_cookie_1_svc (struct CookieRequest *request, struct svc_req *req){
     static int a;
     int b = request->b;
     print_info(); printf("%s requests a cookie\n", getCookieRequestName(b));
