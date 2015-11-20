@@ -21,7 +21,7 @@ int main (int argc, char**argv){
     while (1){
         sleepRand();
         print_info(); printf("Request for a cookie\n");
-        struct CookieRequest request = {JudyNum};
+        struct CookieRequest request = {TinaNum};
         a = request_cookie_1(&request, client);
     
         if (*a == 1){
