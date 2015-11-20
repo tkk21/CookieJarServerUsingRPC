@@ -36,4 +36,6 @@ int main (int argc, char**argv){
              fprintf(stderr, "invalid b value sent to the server\n");
         }
     }
+    clnt_destroy(client);
+    return 0;
 }
