@@ -13,7 +13,7 @@ int main (int argc, char**argv){
     server = argv[1];
     
     //make the client
-    if ( (client = clnt_create(server, DISPLAY_PRG, DISPLAY_VER, "udp")) == (CLIENT *)NULL){
+    if ( (client = clnt_create(server, COOKIE_JAR, COOKIE_JAR_VER, "udp")) == (CLIENT *)NULL){
         clnt_pcreateerror(server);
         exit(2);
     }
