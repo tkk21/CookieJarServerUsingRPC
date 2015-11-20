@@ -18,10 +18,10 @@ int main (int argc, char**argv){
         exit(2);
     }
 
-    while (*a != -2){
+    while (true){
         sleepRand();
         print_info(); printf("Request for a cookie\n");
-        struct CookieRequest request = {TinaNum};
+        struct CookieRequest request = {JudyNum};
         a = request_cookie_1(&request, client);
     
         if (*a == 1){
@@ -32,7 +32,11 @@ int main (int argc, char**argv){
             print_info(); printf("I didn't get a cookie ;-;\n");
         
         }
-        else if (*a == -3) {
+        else if (*a == -2){
+            print_info(); printf("No more cookie for you >:(\n");
+            break;
+        }
+        else {
              fprintf(stderr, "invalid b value sent to the server\n");
         }
     }
