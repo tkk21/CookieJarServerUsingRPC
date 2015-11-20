@@ -18,8 +18,8 @@ char* getCookieRequestName(int b){
 
 int *request_cookie_1_svc (struct CookieRequest *request){
     static int a;
-    
-    print_info(); printf("%s requests a cookie\n", getCookieRequestName(request->b));
+    int b = request->b;
+    print_info(); printf("%s requests a cookie\n", getCookieRequestName(b));
     fflush(NULL);
     if (cookieCount <= 0){
         //ran out of cookie
