@@ -1,20 +1,26 @@
 CC = gcc
 CFLAGS = -g -Wall
 LIBS = # None
-CSOURCE =
-SSOURCE =
-RPCSRC =
-RPCGEN =
-CLIENT = 
-SERVER = 
+TINASOURCE = Tina.c Cookie_clnt.c Cookie_xdr.c
+JUDYSOURCE = Judy.c Cookie_clnt.c Cookie_xdr.c
+MOTHERSOURCE = Mother.c Cookie_svc.c Cookie_xdr.c
+RPCSRC = Cookie.x
+RPCGEN = Cookie.h Cookie_clnt.c Cookie_svc.c Cookie_xdr.c
+JUDY = judy
+TINA = tina
+MOTHER = mother
 
-all: $(CLIENT) $(SERVER)
 
-$(CLIENT): $(CSOURCE) $(RPCGEN)
-	$(CC) $(LIBS) $(CFLAGS) -o $(CLIENT) $(CSOURCE)
+all: $(JUDY) $(TINA) $(MOTHER)
 
-$(SERVER): $(SSOURCE) $(RPCGEN)
-	$(CC) $(LIBS) $(CFLAGS) -o $(SERVER) $(SSOURCE)
+$(JUDY): $(JUDYSOURCE) $(RPCGEN)
+	$(CC) $(LIBS) $(CFLAGS) -o $(JUDY) $(JUDYSOURCE)
+
+$(TINA): $(TINASOURCE) $(RPCGEN)
+	$(CC) $(LIBS) $(CFLAGS) -o $(TINA) $(TINASOURCE)
+
+$(MOTHER): $(MOTHERSOURCE) $(RPCGEN)
+	$(CC) $(LIBS) $(CFLAGS) -o $(MOTHER) $(MOTHERSOURCE)
 
 $(RPCGEN): $(RPCSRC)
 	rpcgen $(RPCSRC)
@@ -22,4 +28,4 @@ $(RPCGEN): $(RPCSRC)
 clean:
 	@# Using the '@' sign to supress echoing
 	@# the line while the command is run
-	rm -f $(CLIENT) $(SERVER) $(RPCGEN)
+	rm -f $(JUDY) $(TINA) $(MOTHER) $(RPCGEN)
