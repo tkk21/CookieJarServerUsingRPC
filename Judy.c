@@ -35,7 +35,4 @@ int main (int argc, char**argv){
             fprintf(stderr, "invalid b value sent to the server\n");
        }
     }
-
-
-
 }
