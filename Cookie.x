@@ -1,8 +1,6 @@
 struct CookieRequest{
-    int a;
     int b;
 };
-
 
 program COOKIE_JAR
 {
