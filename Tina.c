@@ -22,7 +22,7 @@ int main (int argc, char**argv){
         sleepRand();
         print_info(); printf("Request for a cookie\n");
         struct CookieRequest request = {TinaNum};
-        a = request_cookie_1();
+        a = request_cookie_1(&request, client);
     
         if (*a == 1){
             print_info(); printf("I got a cookie <:\n");
